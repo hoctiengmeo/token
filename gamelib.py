@@ -267,30 +267,30 @@ screen_layer.add_child_vertical((sky_layer,ground_layer), (1,1))
 sun_layer = LayerSpriteWithAnimation()
 sky_layer.add_child_freestyle(sun_layer)
 sun_layer.rect = pygame.Rect((0.8 * sun_layer.parent.rect.width,0.2 * sun_layer.parent.rect.height),(frame_width, frame_height))
-sun_layer.set_animation(("C:\\QUANG\\asset\\sky\\sun.png",), 32, 32)
+sun_layer.set_animation((".\\asset\\sky\\sun.png",), 32, 32)
 
 cloud_layer = Cloud()
 sky_layer.add_child_freestyle(cloud_layer)
 cloud_layer.rect = pygame.Rect((0.2 * sun_layer.parent.rect.width,0.22 * sun_layer.parent.rect.height),(frame_width, frame_height))
-cloud_layer.set_animation(("C:\\QUANG\\asset\\sky\\cloud.png",), 32, 32)
+cloud_layer.set_animation((".\\asset\\sky\\cloud.png",), 32, 32)
 cloud_layer.loop_time = 0.01
 
 token_animation_links = (
-    "C:\\QUANG\\asset\\ngap.png",
-    "C:\\QUANG\\asset\\gaydau.png",
-    "C:\\QUANG\\asset\\ngoi1.png",
-    "C:\\QUANG\\asset\\ngoixom1.png",
-    "C:\\QUANG\\asset\\chao.png",
-    "C:\\QUANG\\asset\\ngu1.png",
-    "C:\\QUANG\\asset\\dabanh.png"
+    ".\\asset\\ngap.png",
+    ".\\asset\\gaydau.png",
+    ".\\asset\\ngoi1.png",
+    ".\\asset\\ngoixom1.png",
+    ".\\asset\\chao.png",
+    ".\\asset\\ngu1.png",
+    ".\\asset\\dabanh.png"
 )
 second_token_animation_links = (
     -1,
     -1,
-    "C:\\QUANG\\asset\\ngoi2.png",
-    "C:\\QUANG\\asset\\ngoixom2.png",
+    ".\\asset\\ngoi2.png",
+    ".\\asset\\ngoixom2.png",
     -1,
-    "C:\\QUANG\\asset\\ngu2.png",
+    ".\\asset\\ngu2.png",
     -1
 )
 for x in range(40):
@@ -325,4 +325,5 @@ while running:
     screen_layer.update()
     pygame.display.flip()
     clock.tick(60)
+
 pygame.quit()
